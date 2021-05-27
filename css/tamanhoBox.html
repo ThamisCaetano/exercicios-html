@@ -4,8 +4,26 @@
     <meta charset="UTF-8">
     <title>Tamanho Box</title>
     <style>
+
+        * {
+            box-sizing: border-box;
+         }
+
         body {
             font-size: 45px;
+            margin: 0;
+        }
+
+        div {
+            background-color: lightseagreen;
+            width: 100%;
+            height: 300px;
+            padding: 100px;
+            border: solid 20px;
+            /*box-sizing: content-box; || considera o conteúdo todo sendo 100% + o padding e afins*/
+            /* box-sizing: border-box; || considera o conteúdo da box pra dentro */
+            /*o box-sizing é uma propriedade que não é transmitida por herança, 
+            então mesmo que você suba a hierarquia, ele não é repassado */
         }
     </style>
 </head>
