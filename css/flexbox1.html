@@ -6,7 +6,50 @@
     <title>Flexbox #01</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+       div {
+           border: solid 5px lightseagreen;
+           font-size: 40px;
+           margin: 5px;
+       }
+
+       .big {
+           font-size: 1.5em;
+       }
+
+       .flex-container {
+           display: flex;
+           flex-direction: column;
+           flex-direction: column-reverse; /* do fim para o começo*/
+           flex-direction: row-reverse; /* reverte a linha */
+           flex-direction: row;
+           width: 50%;
+           flex-wrap: wrap; /* quebra o conteúdo em mais linhas para caber no container*/
+           /* flex-wrap: wrap-reverse;  a linha debaixo vai pra cima */
+           flex-flow: row wrap;
+
+           /* justificar o conteúdo */
+           justify-content: flex-start; /* justificando o conteúdo a partir do  início do main axis*/
+           justify-content: flex-end; /* justificando o conteúdo a partir do fim do main axis */
+           justify-content: center; /* centralizar os itens */
+           justify-content: space-around; /* colocar espaços entre os elementos */
+           flex-direction: row-reverse;
+           justify-content: space-between; /* espaço entre os elementos */
+
+           /* Cross Axis */
+           height: 400px;
+           align-items: stretch; /* valor padrão */
+           align-items: baseline; /* vai alinhar pelo baseline das fontes */
+           align-items: flex-start;
+           align-items: flex-start;
+           align-items: center; /* mesma coisa do main axis */
+
+           /* mais de uma linha */
+           align-content: flex-start;
+           align-content: flex-end;
+           align-content: center;
+           align-content: space-between;
+           align-content: space-around;
+       }
     </style>
 </head>
 
