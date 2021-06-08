@@ -6,7 +6,31 @@
     <title>Flexbox #03</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+
+        div {
+           border: solid 5px lightseagreen;
+           font-size: 40px;
+       }
+
+       .flex-container div {
+           box-sizing: border-box;
+       }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-container div {
+            /* flex basis sempre vai atuar no sentido do main axis que você estiver usando */
+            flex-basis: 100px; /* definir o tamanho do elemento pelo main axis */
+            width: 200px; /* vai perder */
+        }
+
+        .flex-container div:nth-child(4) {
+            /* grow shrink basis */
+            flex: 3 6 100px ; 
+        }
     </style>
 </head>
 
